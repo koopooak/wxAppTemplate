@@ -1,3 +1,7 @@
 <view>
-  <text>hello</text>
+  <image class='imgSize' src="/images/avatar/4.png"></image>
+  <text>hello,lws丷</text>
+  <view>
+    <text>开启小程序之旅</text>
+  </view>
 </view>
