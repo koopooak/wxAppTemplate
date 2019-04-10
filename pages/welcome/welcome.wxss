@@ -1,4 +1,41 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+page{
+  background: #b3d4db;
+  height: 100%;
+}
 .imgSize{
   width: 200rpx;
   height: 200rpx;
+  margin-top: 160rpx;
 }
+.user-name{
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.moto-container{
+  border: 1px solid #405f80;
+  height: 60rpx;
+  width: 200rpx;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 200rpx;
+
+}
+.moto{
+  font-size: 22rpx;
+  font-weight: bold;
+  line-height: 60rpx;
+  color:  #405f80;
+}
+
+/* 
+flex 布局 弹性盒子模型
+  display: flex; 设置弹性盒子
+  flex-direction: column; 垂直分布
+  align-items: center; 垂直居中
+ */
