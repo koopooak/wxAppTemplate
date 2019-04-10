@@ -1,0 +1,8 @@
+<!--component/header/header.wxml-->
+<view class='title'>
+{{msg}}
+
+<button bindtap='changeTitle' size='mini'>提交</button>
+
+</view>
+<button bindtap='parent'>子组件调用父组件的方法</button>

@@ -1,0 +1,32 @@
+{
+  "pages": [
+    "pages/user/user",
+        
+    "pages/food/food",
+    "pages/foodContent/foodContent",
+    "pages/index/index"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "微信demo",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/food/food",
+        "text": "菜单",
+        "iconPath": "/statics/images/caidan.png",
+        "selectedIconPath": "/statics/images/caidans.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "/statics/images/wode.png",
+        "selectedIconPath": "/statics/images/wodes.png"
+      }
+    ]
+  }
+}

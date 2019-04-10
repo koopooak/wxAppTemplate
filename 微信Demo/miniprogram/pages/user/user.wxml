@@ -1,0 +1,14 @@
+
+<wxs src="../../wxs/tools.wxs" module="tools" /> 
+
+<header bindparent="run" id="header" title="{{title}}"> </header>
+
+<view> {{tools.formatDate(d)}} </view>
+
+<br/>
+
+
+
+
+
+

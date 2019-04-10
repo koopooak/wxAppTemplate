@@ -1,0 +1,30 @@
+/* pages/food/food.wxss */
+.content{
+  background-color: #f7f7f7;
+}
+
+.h2{
+height: 60rpx;
+width: 100%;
+text-align: center;
+line-height: 60rpx;
+font-size: 40rpx;
+}
+.list{
+  display: flex;
+  flex-wrap: wrap;
+}
+.list .item{
+  width: 33.3%;
+padding: 10rpx;
+box-sizing: border-box;
+}
+.list .item image {
+  width: 90%;
+  height: 160rpx;
+  margin: 0 auto;
+}
+.list .item text{
+  font-size: 30rpx;
+  text-align: center;
+}

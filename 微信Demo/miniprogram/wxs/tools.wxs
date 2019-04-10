@@ -1,0 +1,20 @@
+var foo = "'hello world' from comm.wxs"
+var bar = function (d) {
+  return d
+}
+
+//转化   时间戳  >>  时间
+var formatDate = function (date) {
+
+  var d = getDate(parseFloat(date));
+
+  var y = d.getFullYear()
+  var m = d.getMonth()+1
+  var day = d.getDate()
+  
+  return [y,m,day].join('-');
+}
+
+module.exports = {
+  formatDate:formatDate
+}
