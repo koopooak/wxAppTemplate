@@ -1,0 +1,84 @@
+
+.post-container{
+  display: flex;
+  flex-direction: column;
+  margin-top: 20rpx;
+  margin-bottom: 40rpx;
+  background-color: #fff;
+  border-top:1px solid #ededed;
+  border-bottom:1px solid #ededed;
+  padding-bottom: 10rpx;
+}
+.post-author-date{
+  margin: 10rpx 0 20rpx 10rpx;
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+}
+
+.post-author{
+  height: 60rpx;
+  width: 60rpx;
+  /* vertical-align: middle; */
+  /*
+   垂直居中另一种写法  使用弹性盒子模型
+   给需要居中的元素的父元素 设置弹性盒子属性
+     display: flex; 设置为弹性盒子
+    flex-direction: row;  设置方向  column/垂直 row/水平
+    align-items:center;   居中的方式 center中心居中 
+  */
+}
+.post-date{
+  margin-left: 20rpx;
+  /* vertical-align: middle; */
+  font-size: 26rpx;
+}
+.post-title{
+  font-size: 34rpx;
+  font-weight: 600;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  /*
+   什么时候使用rpx 或者 px ?
+    一般水平方向布局使用rpx 会跟随设备大小适应尺寸
+    当你想让尺寸随着设备变化使用rpx
+    想固定尺寸大小时  使用px;
+    在iphone6 下时 1px = 2rpx;
+    其他设备尺寸换算  看官方文档
+    搞不清楚时优先使用 rpx;
+   */
+   /* #000 纯黑颜色 */
+   color: #333; 
+}
+
+.post-image{
+  width: 100%;
+  height: 340rpx;
+  margin-bottom: 15px;
+}
+.post-content{
+  font-size: 28rpx;
+  color: #666;
+  letter-spacing: 2rpx;
+  /* margin-left: 20rpx;
+  margin-bottom: 20rpx; */
+  /* 上 右 下 左 */
+  margin: 0 20rpx 20rpx 10rpx;
+}
+.post-like{
+  /* 子元素 水平居中 */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 26rpx;
+  margin: 0 0 0 22rpx;
+}
+/* image text 行内元素  本身就会一行 */
+.post-like-image{
+  height: 32rpx;
+  width: 32rpx;
+  margin-right: 16rpx;
+}
+.post-like-font{
+  margin-right: 40rpx;
+}

@@ -1,5 +1,10 @@
 <!-- 阅读页面 -->
-<import src="post-item/post-item-template.wxml"/>
+<!-- 引入模板文件  路径使用相对路径   绝对路径都可以-->
+<!-- 相对路径 -->
+<!-- <import src="post-item/post-item-template.wxml"/> -->
+<!-- 绝对路径 -->
+<import src="/pages/posts/post-item/post-item-template.wxml"/>
+
 <view>
   <swiper indicator-dots='{{true}}' indicator-color='white' indicator-active-color='gray' autoplay='{{true}}' interval='5000'>
     <swiper-item>
@@ -14,6 +19,10 @@
   </swiper>
 
   <block wx:key="Q" wx:for="{{posts_key}}" wx:for-item="item">
-      <template is="postItem" data="{{item}}"/>
-  </block>
+    <!-- data-posId  给组件自定义属性 data-**** -->
+    <view catchtap="jumpPotoDetail" data-posId="{{item.postId}}">
+      <template is="postItem" 
+      data="{{...item}}"/>
+    </view> 
+   </block>
 </view>
