@@ -1,4 +1,5 @@
 <!-- 阅读页面 -->
+<import src="post-item/post-item-template.wxml"/>
 <view>
   <swiper indicator-dots='{{true}}' indicator-color='white' indicator-active-color='gray' autoplay='{{true}}' interval='5000'>
     <swiper-item>
@@ -13,20 +14,6 @@
   </swiper>
 
   <block wx:key="Q" wx:for="{{posts_key}}" wx:for-item="item">
-    <view class='post-container'>
-      <view class='post-author-date'>
-        <image class='post-author' src='{{item.headImgSrc}}'></image>
-        <text class='post-date'>{{item.date}}</text>
-      </view>
-      <text class='post-title'>{{item.title}}</text>
-      <image class='post-image' src='{{item.imgSrc}}'></image>
-      <text class='post-content'>{{item.content}}</text>
-      <view class='post-like'>
-        <image class='post-like-image' src='../../images/icon/chat.png'></image>
-        <text class='post-like-font'>{{item.reading}}</text>
-        <image class='post-like-image' src='../../images/icon/view.png'></image>
-        <text class='post-like-font'>{{item.collection}}</text>
-      </view>
-    </view>
+      <template is="postItem" data="{{item}}"/>
   </block>
 </view>
