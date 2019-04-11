@@ -1,4 +1,7 @@
 // pages/posts/posts.js
+// z这里只能用相对路径  不能用绝对路径
+var postData = require('../../data/posts-data.js')
+
 Page({
 
   /**
@@ -15,27 +18,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    var post_content = [{
-        date: "Nov 18 2019",
-        title: '正是虾肥蟹壮时',
-        post_img: '/images/post/crab.png',
-        content: '用于指定小程序由哪些页面组成，每一项都对应一个页面的 路径（含文件名） 信息。文件名不需要写文件后缀，框架会自动去寻找对于位置的 .json, .js, .wxml, .wxss 四个文件进行处理。',
-        view_num: '112',
-        collect_num: '96',
-        author_img: '/images/avatar/1.png'
-      },
-      {
-        date: "Nov 1 2029",
-        title: '比利·林恩的中场故事',
-        post_img: '/images/post/bl.png',
-        content: '如果小程序是一个多 tab 应用（客户端窗口的底部或顶部有 tab 栏可以切换页面），可以通过 tabBar 配置项指定 tab 栏的表现，以及 tab 切换时显示的对应页面。',
-        view_num: '112',
-        collect_num: '96',
-        author_img: '/images/avatar/2.png'
-      }
-    ]
+
     this.setData({
-      posts_key: post_content
+      posts_key: postData.postList
     });
   },
 
