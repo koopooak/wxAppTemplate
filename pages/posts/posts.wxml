@@ -1,5 +1,6 @@
+<!-- 阅读页面 -->
 <view>
-  <swiper indicator-dots='true' indicator-color='white' indicator-active-color='gray' autoplay='true' interval='1000' vertical='false'>
+  <swiper indicator-dots='{{true}}' indicator-color='white' indicator-active-color='gray' autoplay='{{true}}' interval='5000'>
     <swiper-item>
       <image src='/images/wx.png'></image>
     </swiper-item>
@@ -10,4 +11,35 @@
       <image src='/images/iqiyi.png'></image>
     </swiper-item>
   </swiper>
+
+  <view class='post-container'>
+    <view class='post-author-date'>
+      <image class='post-author' src='{{img.author_img}}'></image>
+      <text class='post-date'>{{date}}</text>
+    </view>
+    <text class='post-title'>{{title}}</text>
+    <image class='post-image' src='{{img.post_img}}'></image>
+    <text class='post-content'>{{content}}</text>
+    <view class='post-like'>
+      <image class='post-like-image' src='../../images/icon/chat.png'></image>
+      <text class='post-like-font' >{{view_num}}</text>
+      <image class='post-like-image' src='../../images/icon/view.png'></image>
+      <text class='post-like-font'>{{collect_num}}</text>
+    </view>
+  </view>
+  <view class='post-container'>
+    <view class='post-author-date'>
+      <image class='post-author' src='/images/avatar/2.png'></image>
+      <text class='post-date'>Sep 19 2019</text>
+    </view>
+    <text class='post-title'>比利·林恩的中场故事</text>
+    <image class='post-image' src='/images/post/bl.png'></image>
+    <text class='post-content'>如果小程序是一个多 tab 应用（客户端窗口的底部或顶部有 tab 栏可以切换页面），可以通过 tabBar 配置项指定 tab 栏的表现，以及 tab 切换时显示的对应页面。</text>
+    <view class='post-like'>
+      <image class='post-like-image' src='../../images/icon/chat.png'></image>
+      <text class='post-like-font' >98</text>
+      <image class='post-like-image' src='../../images/icon/view.png'></image>
+      <text class='post-like-font'>112</text>
+    </view>
+  </view>
 </view>
