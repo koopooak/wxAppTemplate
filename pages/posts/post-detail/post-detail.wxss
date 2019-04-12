@@ -8,6 +8,16 @@
   width: 100%;
 }
 
+.audio{
+  width: 102rpx;
+  height: 110rpx;
+  position: absolute;
+  left: 50%;
+  margin-left: -51rpx;
+  top: 180rpx;
+  opacity: 0.6;
+}
+
 .author-message{
   display: flex;
   flex-direction: row;
@@ -72,10 +82,8 @@
   top: 46rpx;
 }
 .detail{
-  font-size: 30rpx;
   color: #666;
   margin: 20rpx 20rpx 0 20rpx;
   line-height: 44rpx;
   letter-spacing: 2rpx;
-
 }

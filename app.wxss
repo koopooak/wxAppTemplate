@@ -1,3 +1,5 @@
 text{
   font-family: MicroSoft Yahei;
+  font-size: 30rpx;
+
 }

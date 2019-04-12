@@ -1,18 +1,26 @@
 // pages/posts/post-detail/post-detail.js
+// 引入脚本文件 这里只能用相对路径  不能用绝对路径
+var postsData = require('../../../data/posts-data.js')
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var postID = options.id;
+    var postData = postsData.postList[postID];
+    console.log(postData);
+    this.setData({
+      postData:postData
+    })
   },
 
   /**

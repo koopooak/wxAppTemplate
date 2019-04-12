@@ -23,7 +23,7 @@ Page({
   jumpPotoDetail:function(even){
     var posID = even.currentTarget.dataset.posid;
     wx.navigateTo({
-      url: 'post-detail/post-detail',
+      url: 'post-detail/post-detail?id=' + posID,
     })
   }
 
