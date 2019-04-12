@@ -1,0 +1,18 @@
+<view class='container'>
+  <image class='head-img' src='/images/post/sls.jpg'></image>
+  <view class='author-message'>
+    <image class='author-head-img' src='/images/avatar/2.png'></image>
+    <text class='author'>奥迪</text>
+    <text class='author-type'>发表于</text>
+    <text class='author-date'>三天前</text>
+  </view>
+  <text class='title'>LOL好玩吗</text>
+  <view class='tool'>
+    <view class='circle-img'>
+      <image src='/images/icon/collection.png'></image>
+      <image class='share' src='/images/icon/share.png'></image>
+    </view>
+    <view class='line'></view>
+  </view>
+  <text class='detail'>我要买奥迪，奥迪好</text>
+</view>
