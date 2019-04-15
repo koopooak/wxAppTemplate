@@ -16,6 +16,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+    
     var postID = options.id;
     this.data.currentPostID = postID;
     var postData = postsData.postList[postID];
@@ -36,6 +37,20 @@ Page({
       postsCollected[postID] = false;
       wx.setStorageSync("posts_collected", postsCollected)
     }
+    var that = this;
+    wx.getBackgroundAudioManager().onPlay(function() {
+      that.setData({
+        isPlay: true
+      })
+    })
+    wx.getBackgroundAudioManager().onPause(function() {
+      that.setData({
+        isPlay: false
+      })
+    })
+
+
+
   },
   //用户点击收藏
   onCollectionTap: function(event) {
@@ -100,7 +115,7 @@ Page({
     var jsonData = postsData.postList[this.data.currentPostID];
     var audioManager = wx.getBackgroundAudioManager();
     if (isPlay) {
-      audioManager.stop();
+      audioManager.pause();
       this.setData({
         isPlay: false
       })
