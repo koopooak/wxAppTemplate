@@ -53,4 +53,41 @@
 
 ///////
 如何设置缓存
+    //不手动清除  会永远保存到小程序里
+    同步设置缓存
+    wx.setStorageSync(key, value)
+    
+    异步获取缓存
+    wx.getStorage({
+      key: 'posts_collected',
+      success: function(res) {
+        res.data  是返回的数据
+    )}
+
   
+交互反馈
+  wx.showToast({
+      title: "",
+      duration:1000,
+      icon:'success' or 'loading',
+      success:function(){},
+      complete:function(){}
+    })
+  wx.showModal({
+    title: '收藏',
+    content: '是否收藏该文章',
+    showCancel:true,
+    cancelText:'不收藏',
+    success:function(res){
+      // res.confirm 为ture时  用户点击确定
+      if(res.confirm){
+
+      } else{
+
+      }
+    }
+  })
+  wx.showActionSheet({
+
+  });
+
