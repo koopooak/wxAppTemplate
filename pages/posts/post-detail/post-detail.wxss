@@ -50,10 +50,11 @@
 }
 
 .title{
-  font-size: 36rpx;
+  font-size: 40rpx;
   font-weight: 700;
   margin-top: 30rpx;
   margin-left: 30rpx;
+  margin-right: 30rpx;
   letter-spacing: 2rpx;
   color: #4b556c;
 }
