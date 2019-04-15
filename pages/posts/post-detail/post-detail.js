@@ -8,7 +8,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-
   },
 
   /**
@@ -18,7 +17,6 @@ Page({
     var postID = options.id;
     this.data.currentPostID = postID;
     var postData = postsData.postList[postID];
-    console.log(postData);
     this.setData({
       postData: postData
     })
@@ -27,9 +25,9 @@ Page({
     if (postsCollected) {
       var postCollected = postsCollected[postID];
       if (postCollected){
-        tihs.setData({
+        this.setData({
           collected: postCollected
-        })
+        });
       }
     } else {
       var postsCollected = {};
@@ -43,12 +41,14 @@ Page({
     var postsCollection = wx.getStorageSync("posts_collected")
     var postCollected = postsCollection[this.data.currentPostID];
     postCollected = !postCollected;
-    postsCollected[this.data.currentPostID] = postCollected;
+    postsCollection[this.data.currentPostID] = postCollected;
     //更新缓存
-    wx.setStorageSync("posts_collected", postsCollected)
-    tihs.setData({
+    wx.setStorageSync("posts_collected", postsCollection)
+    this.setData({
       collected: postCollected
-    })
+    });
+
+
   },
   //用户点击分享
   onShareTap:function(event) {
