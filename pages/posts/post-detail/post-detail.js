@@ -1,6 +1,7 @@
 // pages/posts/post-detail/post-detail.js
 // 引入脚本文件 这里只能用相对路径  不能用绝对路径
 var postsData = require('../../../data/posts-data.js')
+var app = getApp();
 
 Page({
 
@@ -16,14 +17,14 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    
+
     var postID = options.id;
     this.data.currentPostID = postID;
     var postData = postsData.postList[postID];
     this.setData({
       postData: postData
     })
-
+    //判断当前缓存
     var postsCollected = wx.getStorageSync("posts_collected");
     if (postsCollected) {
       var postCollected = postsCollected[postID];
@@ -37,21 +38,34 @@ Page({
       postsCollected[postID] = false;
       wx.setStorageSync("posts_collected", postsCollected)
     }
+
+    this.changeMusicStats();
+
+    //判断当前是否在播放
+    if (app.globalData.g_isPlay && app.globalData.g_currentID === postID){
+        this.setData({
+          isPlay:true
+        })
+    }
+  },
+  changeMusicStats: function() {
     var that = this;
     wx.getBackgroundAudioManager().onPlay(function() {
       that.setData({
         isPlay: true
       })
+      app.globalData.g_isPlay = true;
+      app.globalData.g_currentID = this.data.currentPostID;
     })
+    // 音乐暂听
     wx.getBackgroundAudioManager().onPause(function() {
       that.setData({
         isPlay: false
       })
+      app.globalData.g_isPlay = false;
     })
-
-
-
   },
+
   //用户点击收藏
   onCollectionTap: function(event) {
     // 异步获取数据

@@ -1,5 +1,10 @@
 #wxApp
 
+
+豆瓣地址
+http://t.yushu.im
+
+
 *******
 *******
 *******
@@ -90,4 +95,6 @@
   wx.showActionSheet({
 
   });
+
+
 
