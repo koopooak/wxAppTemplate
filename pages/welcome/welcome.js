@@ -8,7 +8,10 @@ Page({
     // })
     // 调用 redirectTo 会销毁当前页面  不会保留 所以无法
     // 返回前一个页面
-    wx.redirectTo({
+    // wx.redirectTo({
+    //   url: '../posts/posts',
+    // })
+    wx.switchTab({
       url: '../posts/posts',
     })
   }

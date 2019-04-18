@@ -20,12 +20,19 @@ Page({
     });
 
   },
+//   currentTarget 指的是事件捕获的事件
+//   target 当前点击的组件
+  jumpDetail: function (even) {
+    var posID = even.target.dataset.posid;
+    wx.navigateTo({
+      url: 'post-detail/post-detail?id=' + posID,
+    })
+  },
   jumpPotoDetail:function(even){
     var posID = even.currentTarget.dataset.posid;
     wx.navigateTo({
       url: 'post-detail/post-detail?id=' + posID,
     })
   }
-
 
 })
