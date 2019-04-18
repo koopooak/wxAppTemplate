@@ -12,7 +12,9 @@ Page({
     //   url: '../posts/posts',
     // })
     wx.switchTab({
-      url: '../posts/posts',
+      // url: '../posts/posts',
+      url: '../movies/movies',
+
     })
   }
 

@@ -1,3 +1,10 @@
+<!-- 引入模板 -->
+<import src="/pages/movies/movies-list-template/movies-list-template.wxml" />
+
+
 <view>
-  
+  <template is="moviesList-Template" />
+    <template is="moviesList-Template" />
+  <template is="moviesList-Template" />
+
 </view>

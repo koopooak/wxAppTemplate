@@ -1,0 +1,13 @@
+<!-- 引入stars-Template -->
+
+<import src="/pages/movies/stars-template/stars-template.wxml"/>
+
+
+<template name = "movies-Template">
+  <view>
+    <image src='https:\/\/img3.doubanio.com\/view\/photo\/s_ratio_poster\/public\/p2508925590.jpg'></image>
+    <text>神秘巨星</text>
+    <template is="stars-Template"/>
+  </view>
+
+</template>
