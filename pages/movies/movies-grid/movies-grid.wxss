@@ -1,2 +1,10 @@
 @import "/pages/movies/movies-template/movies-template.wxss";
 
+.moviesList{
+  float: left;
+  margin-bottom: 20rpx;
+}
+
+.grid-movies{
+  margin: 40rpx 0 40rpx 6rpx;
+}
