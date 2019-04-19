@@ -104,4 +104,6 @@ target 当前点击的组件
   });
 
 
+动态设置导航页面的 title时  必须在onReady:function(){}里面使用
+
 

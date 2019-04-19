@@ -1,20 +1,20 @@
 {
   "pages": [
-    "pages/welcome/welcome",
-    "pages/posts/posts",
-  "pages/posts/post-detail/post-detail",
     "pages/movies/movies",
-    "pages/movies/more-movies/more-movies"
+    "pages/posts/posts",
+    "pages/posts/post-detail/post-detail",
+    "pages/movies/more-movies/more-movies",
+    "pages/welcome/welcome"
   ],
   "window": {
     "navigationBarBackgroundColor": "#405f80"
   },
-    "requiredBackgroundModes": [
-      "audio"
-    ],        
-    "tabBar": {
-    "selectedColor":"#405f80",
-    "borderStyle":"white",
+  "requiredBackgroundModes": [
+    "audio"
+  ],
+  "tabBar": {
+    "selectedColor": "#405f80",
+    "borderStyle": "white",
     "list": [
       {
         "pagePath": "pages/movies/movies",
@@ -25,10 +25,9 @@
       {
         "pagePath": "pages/posts/posts",
         "text": "阅读",
-      "iconPath":"/images/tab/yuedu.png",    "selectedIconPath":"/images/tab/yuedu_hl.png"
+        "iconPath": "/images/tab/yuedu.png",
+        "selectedIconPath": "/images/tab/yuedu_hl.png"
       }
-      
     ]
   }
-  
 }
