@@ -1,11 +1,13 @@
 <template name="stars-Template">
-  <view>
-    <image  src='/images/icon/star.png'></image>
-    <image src='/images/icon/star.png'></image>
-    <image src='/images/icon/star.png'></image>
-    <image src='/images/icon/star.png'></image>
-    <image src='/images/icon/star.png'></image>
-    <text>8.0</text>
+  <view class='stars-container'>
+  <view class='stars'>
+  <block wx:key="Q" wx:for="{{stars}}" wx:for-item="i">
+        <image wx:if="{{i}}" src="/images/icon/star.png"></image>
+        <image wx:else src="/images/icon/none-star.png"></image>
+      </block>
+  </view>
+    
+    <text class='star-scour'>{{souce}}</text>
   </view>
 
 </template>

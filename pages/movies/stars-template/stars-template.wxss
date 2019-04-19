@@ -1,0 +1,25 @@
+
+.stars-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.stars{
+  display: flex;
+  flex-direction: row;
+  margin-right: 24rpx;
+  height: 17rpx;
+
+}
+
+.stars image{
+  height: 17rpx;
+  width: 17rpx;
+  padding-left: 3rpx;
+  vertical-align: middle;
+
+}
+
+.star-scour{
+  color: #1f3463;
+}

@@ -2,7 +2,8 @@ App({
 
   globalData:{
     g_isPlay:false,
-    g_currentID:null
+    g_currentID:null,
+    g_dbURL:'http://t.yushu.im'
 
   },
 

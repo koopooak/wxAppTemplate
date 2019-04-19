@@ -1,18 +1,22 @@
-
 <!-- 引入movies-template -->
-<import src="/pages/movies/movies-template/movies-template.wxml"/>
+<import src="/pages/movies/movies-template/movies-template.wxml" />
 
 <template name='moviesList-Template'>
-  <view>
-    <view>
-      <text>正在热映</text>
-      <view> 
-        <text>更多</text>
-        <image src="/images/icon/arrow-right.png"></image>
+
+  <view class='movies-list-container'>
+    <view class='inner-container'>
+      <view class='movie-head'>
+        <text class='slogan'>{{categoryTitle}}</text>
+        <view class='more'>
+          <text class='moreText'>更多</text>
+          <image class='more-img' src="/images/icon/arrow-right.png"></image>
+        </view>
+      </view>
+      <view class='movies-container'>
+      <block wx:key="Q" wx:for="{{movies}}" wx:for-item="movie">
+          <template is='movies-Template' data="{{...movie}}"/>
+      </block>
       </view>
     </view>
-    <template is='movies-Template'/>
-    <template is='movies-Template'/>
-    <template is='movies-Template'/>
   </view>
 </template>

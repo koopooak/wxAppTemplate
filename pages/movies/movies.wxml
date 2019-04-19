@@ -1,10 +1,8 @@
 <!-- 引入模板 -->
 <import src="/pages/movies/movies-list-template/movies-list-template.wxml" />
 
-
-<view>
-  <template is="moviesList-Template" />
-    <template is="moviesList-Template" />
-  <template is="moviesList-Template" />
-
+<view class='movies-container-bg'>
+  <template is="moviesList-Template" data="{{...intheat}}"/>
+  <template is="moviesList-Template" data="{{...comingSoon}}"/>
+  <template is="moviesList-Template" data="{{...top250}}"/>
 </view>

@@ -1,1 +1,7 @@
 /* pages/movies/movies.wxss */
+
+@import "/pages/movies/movies-list-template/movies-list-template.wxss";
+
+.movies-container-bg{
+  background: #f2f2f2;
+}

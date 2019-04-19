@@ -4,10 +4,10 @@
 
 
 <template name = "movies-Template">
-  <view>
-    <image src='https:\/\/img3.doubanio.com\/view\/photo\/s_ratio_poster\/public\/p2508925590.jpg'></image>
-    <text>神秘巨星</text>
-    <template is="stars-Template"/>
+  <view class='movie-container'>
+    <image class='movie-img' src='{{coverageUrl}}'></image>
+    <text class='movie-title'>{{title}}</text>
+    <template is="stars-Template" data="{{stars:stars,souce:average}}"/>
   </view>
 
 </template>
