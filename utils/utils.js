@@ -13,14 +13,17 @@ function ConvertToStarsArray(stars) {
 
 // 封装网络请求
 function GetHttp(url,callBack) {
+  wx.showNavigationBarLoading();
   wx.request({
     url: url,
     method:"GET",
     success:function(res){
       callBack(res.data.subjects)
+      wx.hideNavigationBarLoading();
     },
     fail: function(error) {
       console.log(error);
+      wx.hideNavigationBarLoading();
     }
   })
 }

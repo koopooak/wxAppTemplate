@@ -1,6 +1,14 @@
 <import src="../movies-template/movies-template.wxml" />
 
 <template name="movies-grid-template">
+<!-- <scroll-view class='grid-movies' scroll-y="true" scroll-x="false" bindscrolltolower="onScrolltolower">
+  <block wx:key="Q" wx:for="{{movies}}" wx:for-item="movie">
+    <view class='moviesList'>
+      <template is="movies-Template" data="{{...movie}}" />
+    </view>
+  </block>
+</scroll-view> -->
+
 <view class='grid-movies'>
   <block wx:key="Q" wx:for="{{movies}}" wx:for-item="movie">
     <view class='moviesList'>
